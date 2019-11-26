@@ -5,43 +5,45 @@ import sys, traceback
 
 
 if os.getuid() != 0:
-	print "Sorry. This script requires sudo privledges"
+	print "Sorry. This script requires sudo privledges! :("
 	sys.exit()
 def main():
 	try:
 		print ('''
 
- \033[1;36m$$\   $$\                                         $$\            
- $$ | $$  |                                        $$ |           
- $$ |$$  /  $$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\  $$ |           
- $$$$$  /   \____$$\ $$  __$$\ $$  __$$\ $$  __$$\ $$ |           
- $$  $$<    $$$$$$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |           
- $$  \$$\  $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |\__|           
- $$ | \$$\ \$$$$$$$ |$$$$$$$  |\$$$$$$  |$$$$$$$  |$$\ $$$$$$$$\  
- \__|  \__| \_______|$$  ____/  \______/ $$  ____/ \__|\________| 
-                     $$ |                $$ |                     \033[1;m
-    Kali Linux tools \033[1;36m$$ |\033[ for  Pop!_OS  $$ | using Katoolin V2.0 
- \033[1;36m                    \__|                \__| \033[1;m
+ \033[1;36m         $$\   $$\                                         $$\            
+          $$ | $$  |                                        $$ |           
+          $$ |$$  /  $$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\  $$ |           
+          $$$$$  /   \____$$\ $$  __$$\ $$  __$$\ $$  __$$\ $$ |           
+          $$  $$<    $$$$$$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |           
+          $$  \$$\  $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |\__|           
+ $$$$$$$$\$$ | \$$\ \$$$$$$$ |$$$$$$$  |\$$$$$$  |$$$$$$$  |$$\ $$$$$$$$\  
+ \_______|\__|  \__| \_______|$$  ____/  \______/ $$  ____/ \__|\________| 
+                              $$ |                $$ |                     
+                              $$ |                $$ |                     
+                              \__|                \__|                     \033[1;m
 
+    +----------------------------------------------------------------+
+    | Kali Linux tools, using Katoolin V2.0 - Customised for Pop!_OS |
+    +----------------------------------------------------------------+
 
- \033[1;32m+ -- -- +=[ Author: LionSec | Homepage: www.neodrix.com\033[1;m
+ \033[1;32m+ -- -- +=[ Author: Retr0gr4d3 | Original Author: LionSec - www.neodrix.com\033[1;m
  \033[1;32m+ -- -- +=[ 331 Tools \033[1;m
 
 
-\033[1;91m[W] Before updating your system , please remove all Kali-linux repositories to avoid any kind of problem .\033[1;m
+ \033[1;91m[WARNING] Remove all Kali-linux repositories before upgrading your system.
+           This is to prevent issues occuring, and you have been warned.\033[1;m
 		''')
 		def inicio1():
 			while True:
 				print ('''
 1) Add Kali repositories & Update 
 2) View Categories
-3) Install classicmenu indicator
-4) Install Kali menu
 5) Help
 
 			''')
 
-				opcion0 = raw_input("\033[1;36mkat > \033[1;m")
+				opcion0 = raw_input("\033[1;36mKapop! > \033[1;m")
 			
 				while opcion0 == "1":
 					print ('''
@@ -85,27 +87,7 @@ def main():
 						print ("\033[1;31mSorry, that was an invalid command!\033[1;m") 					
 						
 
-				if opcion0 == "3":
-					print (''' 
-ClassicMenu Indicator is a notification area applet (application indicator) for the top panel of Ubuntu's Unity desktop environment.
-
-It provides a simple way to get a classic GNOME-style application menu for those who prefer this over the Unity dash menu.
-
-Like the classic GNOME menu, it includes Wine games and applications if you have those installed.
-
-For more information , please visit : http://www.florian-diesch.de/software/classicmenu-indicator/
-
-''')
-					repo = raw_input("\033[1;32mDo you want to install classicmenu indicator ? [y/n]> \033[1;m")
-					if repo == "y":
-						cmd1 = os.system("add-apt-repository ppa:diesch/testing && apt-get update")
-						cmd = os.system("sudo apt-get install classicmenu-indicator")
-
-				elif opcion0 == "4"	:
-					repo = raw_input("\033[1;32mDo you want to install Kali menu ? [y/n]> \033[1;m")
-					if repo == "y":
-						cmd1 = os.system("apt-get install kali-menu")
-				elif opcion0 == "5":
+				if opcion0 == "5":
 					print (''' 
 ****************** +Commands+ ******************
 
